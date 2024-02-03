@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bihn0bput5lju"]
+[gd_scene load_steps=6 format=3 uid="uid://bihn0bput5lju"]
 
+[ext_resource type="Script" path="res://Main.cs" id="1_5p8sm"]
 [ext_resource type="PackedScene" uid="uid://bwd8f560432va" path="res://player.tscn" id="1_niugo"]
+[ext_resource type="PackedScene" uid="uid://drqjjkyw37a2u" path="res://card.tscn" id="2_e8qb4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1gphs"]
 size = Vector3(60, 2, 60)
@@ -9,6 +11,7 @@ size = Vector3(60, 2, 60)
 size = Vector3(60, 2, 60)
 
 [node name="Main" type="Node"]
+script = ExtResource("1_5p8sm")
 
 [node name="Node" type="StaticBody3D" parent="."]
 
@@ -23,4 +26,7 @@ mesh = SubResource("BoxMesh_e5n3a")
 transform = Transform3D(1, 0, 0, 0, 0.625787, 0.779994, 0, -0.779994, 0.625787, 0, 13.6321, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_niugo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0141492, 1.14087, 0.00772953)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0376759, 1.14087, -0.0052321)
+
+[node name="Card" parent="." instance=ExtResource("2_e8qb4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.106001, 0.885666, -4.79102)
